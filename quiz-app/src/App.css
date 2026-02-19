@@ -1,0 +1,176 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  transition: background 0.4s ease;
+}
+
+.app {
+  width: 420px;
+  transition: 0.4s;
+}
+
+/* DARK THEME */
+.dark {
+  background: linear-gradient(135deg, #0f172a, #1e3a8a);
+  color: white;
+}
+
+/* LIGHT THEME */
+.light {
+  background: linear-gradient(135deg, #e0f2fe, #ffffff);
+  color: #111;
+}
+
+/* Card */
+.card {
+  background: rgba(30, 41, 59, 0.95);
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.4);
+  text-align: center;
+  animation: fadeIn 0.5s ease-in-out;
+  transition: 0.3s;
+}
+
+.light .card {
+  background: white;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+/* Header */
+.quiz-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  font-size: 14px;
+}
+
+/* Timer */
+.timer {
+  font-weight: bold;
+  color: #facc15;
+}
+
+/* Progress Bar */
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #334155;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.light .progress-bar {
+  background: #ddd;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(90deg, #22c55e, #3b82f6);
+  transition: width 0.4s ease;
+}
+
+/* Options */
+.option-btn {
+  width: 100%;
+  padding: 12px;
+  margin-top: 12px;
+  border-radius: 8px;
+  border: none;
+  background: #3b82f6;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.option-btn:hover {
+  background: #2563eb;
+  transform: scale(1.03);
+}
+
+/* Buttons */
+button {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Theme Toggle */
+.theme-toggle {
+  text-align: right;
+  margin-bottom: 15px;
+}
+
+.theme-toggle button {
+  background: #22c55e;
+  color: white;
+}
+
+.theme-toggle button:hover {
+  background: #16a34a;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.select-group {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  background: #334155;
+  color: white;
+  transition: 0.3s;
+}
+
+.light select {
+  background: #f1f5f9;
+  color: black;
+}
+
+select:hover {
+  transform: scale(1.05);
+}
+
+select:focus {
+  box-shadow: 0 0 8px #3b82f6;
+}
+
+.correct {
+  background: #22c55e !important;
+  animation: pop 0.4s ease;
+}
+
+.wrong {
+  background: #ef4444 !important;
+  animation: shake 0.4s ease;
+}
+
+@keyframes shake {
+  0% { transform: translateX(0); }
+  25% { transform: translateX(-5px); }
+  50% { transform: translateX(5px); }
+  75% { transform: translateX(-5px); }
+  100% { transform: translateX(0); }
+}
+
+.card button {
+  margin-top: 15px;
+}
